@@ -12,7 +12,7 @@ El backend está construido con Django Rest Framework 4.1 y Python 3.10.
 1. Descargar y seguir los pasos de la documentación.
 
 #### Instalación de [Django Rest Framework](https://www.django-rest-framework.org/)
-1. Instalar un entorno virtual para el proyecto de Django con `python3.10 -m venv`.
+1. Instalar un entorno virtual para el proyecto de Django con `python -m venv`.
 2. Activar el entorno virtual de esta forma: `.\venv\Scripts\activate` o de esta forma: `source env/Scripts/activate`.
 3. Ejecutar `pip list` para ver los paquetes por defecto.
 4. Instalar Django con `pip install django==4.1.*`, recomendado en la documentación para evitar inconvenientes.
@@ -22,9 +22,10 @@ El backend está construido con Django Rest Framework 4.1 y Python 3.10.
 8. Iniciar el servidor con `python app/manage.py runserver`.
 
 ### Iniciar el Proyecto
-1. Activar el entorno virtual de esta forma: `.\venv\Scripts\activate` o de esta forma: `source env/Scripts/activate`.
-2. Instalar los paquetes ejecutando `pip install -r requirements.txt`.
-3. Ejecutar el backend con `python app/manage.py runserver`.
+1. Instalar un entorno virtual para el proyecto de Django con `python -m venv`.
+2. Activar el entorno virtual de esta forma: `.\venv\Scripts\activate` o de esta forma: `source env/Scripts/activate`.
+3. Instalar los paquetes ejecutando `pip install -r requirements.txt`.
+4. Ejecutar el backend con `python app/manage.py runserver`.
 
 ## Frontend
 
