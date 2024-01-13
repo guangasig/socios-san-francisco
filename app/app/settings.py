@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'coreapi',
+    'app.secretaria.cargo'
 ]
 
 MIDDLEWARE = [
