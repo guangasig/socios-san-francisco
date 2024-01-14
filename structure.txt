@@ -39,6 +39,8 @@ Personalizada
 socios
 |-- app
 |  |-- app
+|  |   |-- modulo
+|  |   |   |-- aplicaciones
 |  |   |-- asgi.py
 |  |   |-- settings.py
 |  |   |-- urls.py
