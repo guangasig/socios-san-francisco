@@ -23,4 +23,5 @@ urlpatterns = [
     path('docs/', include_docs_urls(title='Api Documentation')),
     path('admin/', admin.site.urls),
     path('api/', include(router_cargo.urls)),
+    path('secretaria/', include('app.secretaria.urls')),
 ]
