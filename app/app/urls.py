@@ -20,5 +20,7 @@ from rest_framework.documentation import include_docs_urls
 urlpatterns = [
     path('docs/', include_docs_urls(title='Api Documentation')),
     path('admin/', admin.site.urls),
+    path('api/', include('rest_framework.urls')),
+    path('api/user/', include('app.auth.urls')),
     path('api/secretaria/', include('app.secretaria.urls')),
 ]
