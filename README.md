@@ -22,10 +22,12 @@ El backend está construido con Django Rest Framework 4.1 y Python 3.10.
 8. Iniciar el servidor con `python app/manage.py runserver`.
 
 ### Iniciar el Proyecto
-1. Instalar un entorno virtual para el proyecto de Django con `python -m venv`.
-2. Activar el entorno virtual de esta forma: `.\venv\Scripts\activate` o de esta forma: `source env/Scripts/activate`.
+1. Instalar un entorno virtual para el proyecto de Django con `python -m venv venv`.
+2. Activar el entorno virtual de esta forma: `.\venv\Scripts\activate` o de esta forma : `source venv/Scripts/activate` si usamos la consola git bash.
 3. Instalar los paquetes ejecutando `pip install -r requirements.txt`.
-4. Ejecutar el backend con `python app/manage.py runserver`.
+4. Ejecutar las migraciones con este comando `python app/manage.py migrate`.
+5. Crear un usuario para ingresar al administrador de Django `python app/manage.py createsuperuser`.
+6. Ejecutar el backend con `python app/manage.py runserver`.
 
 ## Frontend
 
