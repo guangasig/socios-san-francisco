@@ -7,5 +7,6 @@ from .socio.api.socio_router import router_socio
 router = DefaultRouter()
 
 urlpatterns = [
+    path('', include(router_cargo.urls)),
     path('', include(router_socio.urls)),
 ]
