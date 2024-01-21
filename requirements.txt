@@ -5,7 +5,9 @@ coreapi==2.3.3
 coreschema==0.0.4
 distlib==0.3.6
 Django==4.1.13
-django-filter @ git+https://github.com/carltongibson/django-filter.git@af9f13b6245cba71b3da358bd014159474ebfb8c
+django-cors-headers==4.3.1
+django-filter==23.5
+django-guardian==2.4.0
 djangorestframework==3.14.0
 filelock==3.12.2
 idna==3.6

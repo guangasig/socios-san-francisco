@@ -12,7 +12,7 @@ El backend está construido con Django Rest Framework 4.1 y Python 3.10.
 1. Descargar y seguir los pasos de la documentación.
 
 #### Instalación de [Django Rest Framework](https://www.django-rest-framework.org/)
-1. Instalar un entorno virtual para el proyecto de Django con `python -m venv`.
+1. Instalar un entorno virtual para el proyecto de Django con `python -m venv venv`.
 2. Activar el entorno virtual de esta forma: `.\venv\Scripts\activate` o de esta forma: `source env/Scripts/activate`.
 3. Ejecutar `pip list` para ver los paquetes por defecto.
 4. Instalar Django con `pip install django==4.1.*`, recomendado en la documentación para evitar inconvenientes.
@@ -51,5 +51,5 @@ Esto es necesario para poder ejecutar los comandos de yarn desde la raíz del pr
 
 ### Iniciar el Proyecto
 1. Ejecutar `yarn` en la raíz del proyecto.
-2. Ejecutar `yarn dev` en la raíz del proyecto.
+2. Ejecutar `yarn dev --host 127.0.0.1 --port 3000` en la raíz del proyecto.
 3. Ingresar a la URL `http://localhost:5173/`.
