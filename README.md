@@ -51,5 +51,5 @@ Esto es necesario para poder ejecutar los comandos de yarn desde la raíz del pr
 
 ### Iniciar el Proyecto
 1. Ejecutar `yarn` en la raíz del proyecto.
-2. Ejecutar `yarn dev` en la raíz del proyecto.
-3. Ingresar a la URL `http://localhost:5173/`.
+2. Ejecutar `yarn dev --host 127.0.0.1 --port 3000` en la raíz del proyecto.
+3. Ingresar a la URL `http://localhost:3000/`.
