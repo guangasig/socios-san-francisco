@@ -12,6 +12,6 @@ class CargoSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Cargo
-        fields = ['cargo', 'descripcion',
+        fields = ['id','cargo', 'descripcion',
                   'created_at', 'updated_at', 'deleted_at']
         read_only_fields = ['created_at', 'updated_at', 'deleted_at']
