@@ -48,19 +48,20 @@ class SocioViewSet(viewsets.ModelViewSet):
             self.perform_create(serializer)
 
             socio = serializer.data
+            print ('socio')
+            print(socio)
             return Response(data={'status': True, 'message': "Registro creado exitosamente", 'socio': socio}, status=status.HTTP_201_CREATED)
 
-        except Socio.DoesNotExist:
-            return Response(data={'status': False, 'message': "Socio no encontrado"}, status=status.HTTP_404_NOT_FOUND)
-
         except serializers.ValidationError as e:
-            if 'cedula' in e.detail and 'unique' in e.detail['cedula']:
-                return Response(
-                    data={'status': False,
-                          'message': "La cédula ya existe", 'cedula': None},
-                    status=status.HTTP_400_BAD_REQUEST
-                )
-            return self.handle_exception_response("Error de validación al crear el registro", status.HTTP_400_BAD_REQUEST)
+            print ('ValidationError', e.detail)
+            # Validar si el socio es unico
+            if 'cedula' in e.detail:
+                for error_detail in e.detail['cedula']:
+                    if 'unique' in error_detail.code:
+                        print("'unique' presente en e.detail['cedula']")
+                        return Response(data={'status': False, 'message': "Ya existe un socio con esta cédula", 'cedula': None}, status=status.HTTP_400_BAD_REQUEST)
+                    
+            return self.handle_exception_response(data={'status': True, 'error': e.detail, 'msg': 'Error de validación al crear el registro'}, status=status.HTTP_400_BAD_REQUEST)
 
         except Exception as e:
             return self.handle_exception_response("Error al crear el registro", status.HTTP_400_BAD_REQUEST)

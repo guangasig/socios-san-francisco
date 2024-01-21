@@ -24,6 +24,6 @@ class SocioSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Socio
-        fields = ['cedula', 'nombres', 'apellidos', 'telefono', 'correo', 'direccion',
+        fields = ['id','cedula', 'nombres', 'apellidos', 'telefono', 'correo', 'direccion',
                   'fecha_nacimiento', 'cargo', 'created_at', 'updated_at', 'deleted_at']
         read_only_fields = ['created_at', 'updated_at', 'deleted_at']
